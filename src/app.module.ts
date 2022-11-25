@@ -5,21 +5,28 @@ import * as dotenv from 'dotenv';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { BookModule } from './book/book.module';
 import { Book } from './book/entities/book.entity';
-
-dotenv.config();
+import { ConfigModule, ConfigService } from '@nestjs/config';
 
 @Module({
-  imports: [ TypeOrmModule.forRoot({
-    type: 'postgres',
-    host: process.env.DB_HOST,
-    port: parseInt(process.env.DB_PORT),
-    username: process.env.DB_USERNAME,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME,
-    entities: [Book],
-    synchronize: process.env.ENV === 'DEV',
-    autoLoadEntities: true,
-  }), BookModule,],
+  imports: [ ConfigModule.forRoot({
+    isGlobal: true,}), 
+    TypeOrmModule.forRootAsync({
+      imports: [ConfigModule],
+      useFactory: ( ConfigService: ConfigService) => ({
+      type: 'postgres',
+      host: ConfigService.get('POSTGRES_DB_HOST'),
+      port: ConfigService.get('POSTGRES_DB_PORT'),
+      username: ConfigService.get('POSTGRES_USER'),
+      password: ConfigService.get('POSTGRES_PASSWORD'),
+      database: ConfigService.get('POSTGRES_DB'),
+      entities: [Book],
+      synchronize: process.env.ENV === 'DEV',
+      autoLoadEntities: true,
+    }),
+    inject: [ConfigService],
+  }), 
+  BookModule
+],
   controllers: [AppController],
   providers: [AppService],
 })
