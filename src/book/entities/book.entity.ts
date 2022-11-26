@@ -1,4 +1,4 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, PrimaryColumnCannotBeNullableError, CreateDateColumn, UpdateDateColumn, DeleteDateColumn } from 'typeorm';
 
 @Entity()
 export class Book {
@@ -23,15 +23,15 @@ export class Book {
     @Column()
     price: number;
 
-    @Column()
+    @CreateDateColumn()
     createdAt: Date;
 
-    @Column()
+    @UpdateDateColumn()
     updatedAt: Date;
 
     //soft delete
-    @Column({ default: false })
-    isDeleted: boolean;
+    @DeleteDateColumn()
+    deletedAt: Date;
 }
 
 

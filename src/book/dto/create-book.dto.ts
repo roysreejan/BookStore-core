@@ -5,7 +5,4 @@ export class CreateBookDto {
     tag: string[];
     isbns: string[];
     price: number;
-    cretedAt: Date;
-    updatedAt: Date;
-    isDeleted: boolean;
 }
