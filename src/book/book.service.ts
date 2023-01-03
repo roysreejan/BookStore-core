@@ -62,12 +62,12 @@ export class BookService {
     book.tag = updateBookDto.tag;
     book.isbns = updateBookDto.isbns;
     book.price = updateBookDto.price;
-    // book.updatedAt = updateBookDto.updatedAt;
     return this.bookRepository.save(book);
   }
 
   async deleteBookById(id: string) {
     const book = await this.bookRepository.findOne({ where: {id: id}});
+    book.deletedAt = new Date();
     return this.bookRepository.save(book);
   }
 }

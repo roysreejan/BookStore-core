@@ -17,7 +17,8 @@ export class Book {
     @Column('simple-array')
     tag: string[];
 
-    @Column('simple-array')
+    //isbn is unique
+    @Column('simple-array', { unique: true })
     isbns: string[];
 
     @Column()
