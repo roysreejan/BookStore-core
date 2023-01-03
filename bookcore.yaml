@@ -1,0 +1,275 @@
+_type: export
+__export_format: 4
+__export_date: 2023-01-03T18:42:03.632Z
+__export_source: insomnia.desktop.app:v2022.7.0
+resources:
+  - _id: req_6169acb6bbdc4550a82fa6cad5032edc
+    parentId: wrk_aacc2bb641604abfa0b8395704aa1c35
+    modified: 1669436865581
+    created: 1669436550442
+    url: http://localhost:3000/book
+    name: getAllBook
+    description: ""
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1669436550442
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: wrk_aacc2bb641604abfa0b8395704aa1c35
+    parentId: null
+    modified: 1669403857488
+    created: 1669403857488
+    name: bookcore
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_50d0ec100e67467a8729231174b18691
+    parentId: wrk_aacc2bb641604abfa0b8395704aa1c35
+    modified: 1672764002969
+    created: 1669437276639
+    url: http://localhost:3000/book/category/Science
+    name: getBookByCategory
+    description: ""
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1667711412441.75
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_8d2b6732b8a94d33bbefc5f5a783b1eb
+    parentId: wrk_aacc2bb641604abfa0b8395704aa1c35
+    modified: 1672764070908
+    created: 1672764031197
+    url: http://localhost:3000/book/tag/abc
+    name: getBookByTag
+    description: ""
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1666848843441.625
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_954c39d6f76d4dc28daa559914d522d0
+    parentId: wrk_aacc2bb641604abfa0b8395704aa1c35
+    modified: 1672764110009
+    created: 1672764094915
+    url: http://localhost:3000/book/author/XYZ
+    name: getBookByAuthor
+    description: ""
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1666417558941.5625
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_de48ffd087a94a6d8bcd792196e17523
+    parentId: wrk_aacc2bb641604abfa0b8395704aa1c35
+    modified: 1672764162478
+    created: 1672764140376
+    url: http://localhost:3000/book/isbn/sadadwad
+    name: getBookByIsbn
+    description: ""
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1666201916691.5312
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_cc0dccde50b84762b0ad1421700a1cb9
+    parentId: wrk_aacc2bb641604abfa0b8395704aa1c35
+    modified: 1672764238464
+    created: 1672764197651
+    url: http://localhost:3000/book/3d19fb9e-aa20-4649-81f8-1f6669bc9166
+    name: getBookById
+    description: ""
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1666094095566.5156
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_1874cb4c4b7a4fde9d565bffa0d16089
+    parentId: wrk_aacc2bb641604abfa0b8395704aa1c35
+    modified: 1672769224431
+    created: 1669436585548
+    url: http://localhost:3000/book
+    name: createBook
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "Design for everyday work",
+        	"author": "Sreejan",
+        	"category": "Computer Science",
+        	"tag": "Engineer Design",
+        	"isbns": "dfew",
+        	"price": 600
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1665986274441.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_08a2b9180c3c4d0e8240622fbbc41174
+    parentId: wrk_aacc2bb641604abfa0b8395704aa1c35
+    modified: 1672764655445
+    created: 1672764337880
+    url: http://localhost:3000/book/3d19fb9e-aa20-4649-81f8-1f6669bc9166
+    name: updateBookById
+    description: ""
+    method: PATCH
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"price": 700
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1664261136441.25
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_658f2d9fe4f94ee09c1a2f0520affaca
+    parentId: wrk_aacc2bb641604abfa0b8395704aa1c35
+    modified: 1672769247986
+    created: 1672764867453
+    url: http://localhost:3000/book/6d5668d5-ea44-4e48-be23-8c7c5e47daed
+    name: deleteBookById
+    description: ""
+    method: DELETE
+    body:
+      mimeType: application/json
+      text: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1663398567441.125
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_cbd3b5fd95b3df0d7d24a2436f587c7e707e82c7
+    parentId: wrk_aacc2bb641604abfa0b8395704aa1c35
+    modified: 1669403857493
+    created: 1669403857493
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1669403857493
+    _type: environment
+  - _id: jar_d26be300cd7d497f7b1354a652615a5895e10425
+    parentId: wrk_aacc2bb641604abfa0b8395704aa1c35
+    modified: 1669403857495
+    created: 1669403857495
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_133e921a71ca40c5b1e6f85d5172612a
+    parentId: wrk_aacc2bb641604abfa0b8395704aa1c35
+    modified: 1669403857490
+    created: 1669403857490
+    fileName: bookcore
+    contents: ""
+    contentType: yaml
+    _type: api_spec
